@@ -15,18 +15,13 @@ classifiers = [
 ]
 dependencies = [
     "rasters",
-    "logging",
-    "datetime",
-    "math",
-    "os",
-    "typing",
     "geopandas",
     "mgrs",
     "numpy",
     "pandas",
     "shapely",
     "affine",
-    "dateutil",
+    "python-dateutil",
     "sentinelsat"
 ]
 
