@@ -1,43 +1,23 @@
-import base64
-import io
-import json
 import logging
-import sys
-import warnings
-from datetime import datetime
-from datetime import timedelta, date
-from glob import glob
+from datetime import timedelta
 from math import floor
-from os import makedirs
-from os.path import abspath, dirname, expanduser
-from os.path import basename
-from os.path import join, exists
-from os.path import splitext
-from time import perf_counter
-from typing import List, Set, Union, Tuple
-from zipfile import ZipFile
+from os.path import abspath, dirname
+from os.path import join
+from typing import Set
 
 import geopandas as gpd
+import mgrs
 import numpy as np
 import pandas as pd
-import rasterio
-import rasterio.crs
 import shapely
 import shapely.geometry
 import shapely.wkt
-import xmltodict
 from affine import Affine
 from dateutil import parser
-import mgrs
-from rasterio.features import rasterize
-from rasterio.warp import Resampling
-from sentinelsat import SentinelAPI, read_geojson, geojson_to_wkt
-from rasters import Point, Polygon, BBox
+from rasters import Polygon, BBox
+from rasters import RasterGrid, CRS
+from sentinelsat import read_geojson, geojson_to_wkt
 from shapely.geometry.base import BaseGeometry
-from six import string_types
-
-import cl
-from rasters import RasterGrid, Raster, RasterGeometry, WGS84, CRS
 
 # from transform.UTM import UTM_proj4_from_latlon, UTM_proj4_from_zone
 
@@ -320,7 +300,6 @@ class SentinelTileGrid(MGRS):
         bbox = self.bbox(tile).buffer(buffer)
         projection = self.UTM_proj4(tile)
         grid = RasterGrid.from_bbox(bbox=bbox, cell_size=cell_size, crs=projection)
-        # logger.info(f"tile {cl.place(tile)} at resolution {cl.val(cell_size_degrees)} {grid.shape}")
 
         return grid
 
@@ -344,4 +323,4 @@ class SentinelTileGrid(MGRS):
 
         return tiles
 
-sentinel_tile_grid = SentinelTileGrid()
+sentinel_tiles = SentinelTileGrid()

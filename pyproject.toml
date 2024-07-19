@@ -14,10 +14,23 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    "rasters"
+    "rasters",
+    "logging",
+    "datetime",
+    "math",
+    "os",
+    "typing",
+    "geopandas",
+    "mgrs",
+    "numpy",
+    "pandas",
+    "shapely",
+    "affine",
+    "dateutil",
+    "sentinelsat"
 ]
 
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 
 [tool.setuptools.package-data]
 sentinel_tiles = ["*.txt", "*.geojson"]
