@@ -7,3 +7,5 @@ The Julia equivalent of this package is [SentinelTiles.jl](https://github.com/ST
 [Gregory H. Halverson](https://github.com/gregory-halverson-jpl) (they/them)<br>
 [gregory.h.halverson@jpl.nasa.gov](mailto:gregory.h.halverson@jpl.nasa.gov)<br>
 NASA Jet Propulsion Laboratory 329G
+
+![MGRS grid](MGRS_GZD.png)
