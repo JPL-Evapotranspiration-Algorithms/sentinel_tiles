@@ -9,3 +9,19 @@ The Julia equivalent of this package is [SentinelTiles.jl](https://github.com/ST
 NASA Jet Propulsion Laboratory 329G
 
 ![MGRS grid](MGRS_GZD.png)
+
+## Installation
+
+This package is available on PyPi as a [pip package](https://pypi.org/project/sentinel-tiles/) called `sentinel-tiles` with a dash.
+
+```bash
+pip install sentinel-tiles
+```
+
+## Usage
+
+Import this package as `sentinel_tiles` with an under-score.
+
+```python
+import sentinel_tiles
+```
