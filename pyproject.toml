@@ -27,5 +27,11 @@ dependencies = [
 
 requires-python = ">=3.11"
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov",  # For test coverage reports (optional)
+]
+
 [tool.setuptools.package-data]
 sentinel_tiles = ["*.txt", "*.geojson"]
